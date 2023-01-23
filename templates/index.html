@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Handle the flash message to appear as a popup -->
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("snackbar");
+            x.className = "show";
+            setTimeout(function () {
+                x.className = x.className.replace("show", "");
+            }, 3000);
+        }
+    </script>
+
+    <!-- show the flask flash message -->
+    {% if message %}
+    <div id="snackbar">{{ message }}</div>
+    <script>
+        myFunction();
+    </script>
+    {% endif %}
+
+
+    <!-- <meta charset="UTF-8"> -->
+
+
+    <title>Email Sender</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/layout.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/form.css')}}">
+</head>
+
+<body>
+    <h1 class="heading">Email Sender</h1>
+    <div class="container">
+        <form class="form-container" method="POST" action="{{ url_for('send_emails') }}" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="csv_file">Upload CSV</label>
+                <input type="file" name="csv_file" id="csv_file" required>
+            </div>
+            <div class="form-group">
+                <label for="attachment">Upload Attachment</label>
+                <input type="file" name="attachment" id="attachment" required>
+            </div>
+            <div class="form-group">
+                <label for="template">HTML template</label>
+                <textarea name="template" id="template" cols="30" rows="10" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" name="subject" id="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <input type="submit" value="Send Emails">
+        </form>
+    </div>
+</body>
+
+</html>

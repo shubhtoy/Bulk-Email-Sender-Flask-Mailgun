@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Email sending status</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Add inline css -->
+
+    <style>
+        table {
+            width: 100%;
+            /* this makes the table take up the full width of the screen */
+        }
+
+        /* styles for screens smaller than 600px */
+        @media (max-width: 600px) {
+            table {
+                font-size: 0.8em;
+                /* decrease font size for smaller screens */
+            }
+
+            /* make table columns stack vertically on top of each other for smaller screens */
+            th,
+            td {
+                display: block;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <h2 class="center-align">Email sending status</h2>
+        <table class="striped">
+            <thead>
+                <tr>
+                    <th>To</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in results %}
+                <tr>
+                    <td>{{result.to}}</td>
+                    <td>
+                        {% if result.status %}
+                        <span class="green-text">Sent</span>
+                        {% else %}
+                        <span class="red-text">Error</span>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
