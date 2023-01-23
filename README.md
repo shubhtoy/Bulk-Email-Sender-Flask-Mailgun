@@ -32,7 +32,7 @@ The email format should be "Designation<emailid@{}>"
 
 ## Note
 
--   Make sure that the "to" field in the csv file is in the format "Designation<emailid@{}>".
+-   Make sure that the "to" field in the csv file is in the format `Designation<emailid@{}>`.
 -   Make sure that "to" field is present in the csv file.
 -   Placeholder fields in the HTML template should be in the format `{{field_name}}`
 ## Built With
