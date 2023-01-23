@@ -45,7 +45,7 @@ The email format should be "Designation<emailid@{}>"
 
 ## Project Website
 
-You can find the project website at [https://GoodnaturedGiddyFormulas.shubhtoy.repl.co](https://GoodnaturedGiddyFormulas.shubhtoy.repl.co)
+You can find the project website at [Replit](https://GoodnaturedGiddyFormulas.shubhtoy.repl.co)
 
 
 ## Authors
