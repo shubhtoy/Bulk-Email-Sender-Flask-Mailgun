@@ -1,7 +1,7 @@
 import requests
 
 
-def send_email(to, subject, attachment, template,**kwargs):
+def send_email(to, subject, attachment, template, **kwargs):
     """Function to send email using Mailgun API"""
     api_key = ""
     domain = ""
@@ -14,20 +14,20 @@ def send_email(to, subject, attachment, template,**kwargs):
             pass
     print(attachment)
     if attachment:
-      try:
-        response = requests.post(
-            url,
-            auth=("api", api_key),
-            files=[("attachment", open(attachment, "rb"))],
-            data={
-                "from": kwargs["from"].format(domain),
-                "to": to,
-                "subject": subject,
-                "html": template,
-            },
-        )
-      except:
-        return send_email(to,subject,None,template,**kwargs)
+        try:
+            response = requests.post(
+                url,
+                auth=("api", api_key),
+                files=[("attachment", open(attachment, "rb"))],
+                data={
+                    "from": kwargs["from"].format(domain),
+                    "to": to,
+                    "subject": subject,
+                    "html": template,
+                },
+            )
+        except:
+            return send_email(to, subject, None, template, **kwargs)
     else:
         print("hey")
         response = requests.post(
