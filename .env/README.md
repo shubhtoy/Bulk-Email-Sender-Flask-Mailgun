@@ -17,9 +17,10 @@ This application is a simple utility that allows you to send emails to multiple 
 4.  Run the application by executing `python app.py`.
 5.  In your browser, go to `http://localhost:5000/` to access the application.
 6.  Select a CSV file containing the email addresses and an HTML template file.
-7.  Fill in the subject and password fields, and select an attachment file (if any).
-8.  Click on the "Send Emails" button to start sending emails.
-9.  A table will appear on the page showing the status of each email sent (success or failure).
+7.  The default password is "shubh".
+8.  Fill in the subject and password fields, and select an attachment file (if any).
+9.  Click on the "Send Emails" button to start sending emails.
+10. A table will appear on the page showing the status of each email sent (success or failure).
 
 ## CSV format
 
