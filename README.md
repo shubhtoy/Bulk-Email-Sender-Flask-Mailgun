@@ -42,6 +42,12 @@ The email format should be "Designation<emailid@{}>"
 -   [Mailgun](https://www.mailgun.com/) - Email sending API
 -   [Bootstrap](https://getbootstrap.com/) - CSS framework used for styling
 
+
+## Project Website
+
+You can find the project website at [https://GoodnaturedGiddyFormulas.shubhtoy.repl.co](https://GoodnaturedGiddyFormulas.shubhtoy.repl.co)
+
+
 ## Authors
 
 -   [Shubh](https://github.com/shubhtoy)
